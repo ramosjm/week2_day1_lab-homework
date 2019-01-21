@@ -6,21 +6,26 @@ class MyTeam
     @coach = coach
   end
 
-  def get_team_name()
-    return @team_name
-  end
+  attr_accessor :team_name, :players, :coach
 
-  def get_players()
-    return @players
-  end
+  
 
-  def get_coach
-    return @coach
-  end
-
-  def set_coach(coach)
-    @coach = coach
-  end
+  # old code:
+  # def get_team_name()
+  #   return @team_name
+  # end
+  #
+  # def get_players()
+  #   return @players
+  # end
+  #
+  # def get_coach
+  #   return @coach
+  # end
+  #
+  # def set_coach(coach)
+  #   @coach = coach
+  # end
 
 
 end
