@@ -6,6 +6,7 @@ class ClassesLabTest < MiniTest::Test
 
   def setup()
     @student_info = Student.new("Ralph","G9")
+    @new_student_info = Student.new("Dave","G6")
   end
 
   def test_get_student_name()
@@ -14,6 +15,16 @@ class ClassesLabTest < MiniTest::Test
 
   def test_get_cohort()
     assert_equal("G9",@student_info.get_cohort())
+  end
+
+  def test_set_student_name()
+    @student_info.set_student_name("Dave")
+    assert_equal("Dave",@student_info.get_student_name())
+  end
+
+  def test_set_cohort()
+    @student_info.set_student_cohort("G6")
+    assert_equal("G6",@student_info.get_cohort())
   end
 
 end
