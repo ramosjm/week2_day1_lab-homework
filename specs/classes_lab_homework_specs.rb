@@ -12,4 +12,8 @@ class ClassesLabTest < MiniTest::Test
     assert_equal("Ralph",@student_info.get_student_name())
   end
 
+  def test_get_cohort()
+    assert_equal("G9",@student_info.get_cohort())
+  end
+
 end
