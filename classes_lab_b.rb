@@ -8,7 +8,9 @@ class MyTeam
 
   attr_accessor :team_name, :players, :coach
 
-  
+  def add_player(player)
+    @players << player
+  end
 
   # old code:
   # def get_team_name()

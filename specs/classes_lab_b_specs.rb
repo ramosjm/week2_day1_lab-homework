@@ -6,6 +6,7 @@ class MyTeamTest < MiniTest::Test
 
   def setup()
     @team_info = MyTeam.new("Yorkies",["dave","nathan","bob"],"Mike Douglas")
+    @new_player ="tony"
   end
 
   def test_get_team_name()
@@ -23,6 +24,11 @@ class MyTeamTest < MiniTest::Test
   def test_set_coach_name()
     @team_info.coach ="Steve Miller"
     assert_equal("Steve Miller",@team_info.coach)
+  end
+
+  def test_add_player()
+    @team_info.add_player(@new_player)
+    assert_equal(4,@team_info.players.count)
   end
 
 end
