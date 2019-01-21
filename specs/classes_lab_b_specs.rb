@@ -11,5 +11,8 @@ class MyTeamTest < MiniTest::Test
   def test_get_team_name()
     assert_equal("Yorkies",@team_info.get_team_name)
   end
+  def test_get_players()
+    assert_equal("9",@team_info.get_players)
+  end
 
 end
