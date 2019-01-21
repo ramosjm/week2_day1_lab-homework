@@ -6,7 +6,7 @@ class ClassesLabTest < MiniTest::Test
 
   def setup()
     @student_info = Student.new("Ralph","G9")
-    @new_student_info = Student.new("Dave","G6")
+    #@new_student_info = Student.new("Dave","G6")
   end
 
   def test_get_student_name()
@@ -27,4 +27,8 @@ class ClassesLabTest < MiniTest::Test
     assert_equal("G6",@student_info.get_cohort())
   end
 
+  def test_can_talk
+    @student_info.can_talk()
+    assert_equal("I can talk!",@student_info.can_talk())
+  end
 end
