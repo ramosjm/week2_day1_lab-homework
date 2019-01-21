@@ -1,15 +1,25 @@
 class MyTeam
 
+  attr_accessor :team_name, :players, :coach
+
   def initialize(team_name,players,coach)
     @team_name = team_name
     @players = players
     @coach = coach
   end
 
-  attr_accessor :team_name, :players, :coach
+
 
   def add_player(player)
     @players << player
+  end
+
+  def find_player(name)
+    for player in @players
+      if player == name
+        return player
+      end
+    end
   end
 
   # old code:

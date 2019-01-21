@@ -31,4 +31,10 @@ class MyTeamTest < MiniTest::Test
     assert_equal(4,@team_info.players.count)
   end
 
+  def test_find_player()
+    assert_equal("bob",@team_info.find_player("bob"))
+  end
+
+
+
 end
