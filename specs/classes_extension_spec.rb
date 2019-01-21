@@ -4,30 +4,7 @@ require_relative('../classes_extension.rb')
 
 class MyLibraryTest < MiniTest::Test
 
-  def setup()
-      @library = MyLibrary.new([
-        {
-          title: "lord_of_the_rings",
-          rental_details: {
-            student_name: "Jeff",
-            date: "01/12/16"
-            }
-        },
-        {
-          title: "curiosity",
-          rental_details: {
-            student_name: "Joan",
-            date: "05/10/18"
-            }
-        },
-        {
-          title: "discovery",
-          rental_details: {
-            student_name: "Steve",
-            date: "03/04/17"
-            }
-        }
-    ])
+  def setup
 
     @books = [
       {
@@ -51,7 +28,30 @@ class MyLibraryTest < MiniTest::Test
           date: "03/04/17"
           }
       }
-  ]
+    ]
+    @library = MyLibrary.new(@books)
+    #     {
+    #       title: "lord_of_the_rings",
+    #       rental_details: {
+    #         student_name: "Jeff",
+    #         date: "01/12/16"
+    #         }
+    #     },
+    #     {
+    #       title: "curiosity",
+    #       rental_details: {
+    #         student_name: "Joan",
+    #         date: "05/10/18"
+    #         }
+    #     },
+    #     {
+    #       title: "discovery",
+    #       rental_details: {
+    #         student_name: "Steve",
+    #         date: "03/04/17"
+    #         }
+    #     }
+    # ])
 
   end
 
