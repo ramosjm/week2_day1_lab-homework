@@ -5,7 +5,7 @@ require_relative('../classes_lab_homework.rb')
 class ClassesLabTest < MiniTest::Test
 
   def setup()
-    @student_info = Student.new("Ralph","G9")
+    @student_info = Student.new("Ralph","G9","Ruby")
     #@new_student_info = Student.new("Dave","G6")
   end
 
@@ -27,8 +27,12 @@ class ClassesLabTest < MiniTest::Test
     assert_equal("G6",@student_info.get_cohort())
   end
 
-  def test_can_talk
+  def test_can_talk()
     @student_info.can_talk()
     assert_equal("I can talk!",@student_info.can_talk())
+  end
+
+  def test_favourite_language()
+    assert_equal("My favourite language is Ruby!",@student_info.favourite_language())
   end
 end
