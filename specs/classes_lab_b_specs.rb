@@ -5,7 +5,7 @@ require_relative('../classes_lab_b.rb')
 class MyTeamTest < MiniTest::Test
 
   def setup()
-    @team_info = MyTeam.new("Yorkies",["dave","nathan","bob"],"Mike Douglas")
+    @team_info = MyTeam.new("Yorkies",["dave","nathan","bob"],"Mike Douglas",0)
     @new_player ="tony"
   end
 
@@ -35,6 +35,12 @@ class MyTeamTest < MiniTest::Test
     assert_equal("bob",@team_info.find_player("bob"))
   end
 
+  def test_result__win()
+    assert_equal(1,@team_info.result_points("win"))
+  end
+  def test_result__lose()
+    assert_equal(-1,@team_info.result_points("lose"))
+  end
 
 
 end
