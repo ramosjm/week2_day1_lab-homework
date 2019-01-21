@@ -1,15 +1,13 @@
 class MyLibrary
 
-  def initialize(title)
-    @title = title
+  def initialize(books)
+    @books = books
 
   end
 
   def get_books()
-    return @title
+    return @books
   end
-
-
 
 
 end
