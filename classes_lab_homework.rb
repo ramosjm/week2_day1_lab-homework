@@ -26,7 +26,11 @@ class Student
     return "I can talk!"
   end
 
-  def favourite_language
+  def set_language(language)
+    return @language = language
+  end
+
+  def say_favourite_language
     return "My favourite language is #{@language}!"
   end
 
